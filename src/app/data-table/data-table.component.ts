@@ -7,7 +7,7 @@ import { Table } from '../interfaces/table'
   styleUrls: ['./data-table.component.scss']
 })
 export class DataTableComponent implements OnInit {
-
+  tableName = 'Entries';
   TableData: Table = {
     entries: [
       {

@@ -11,13 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MonthlyBudgetComponent } from './monthly-budget/monthly-budget.component';
+import { SumPipe } from './pipes/sum.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataTableComponent,
     HomePageComponent,
-    MonthlyBudgetComponent
+    MonthlyBudgetComponent,
+    SumPipe
   ],
   imports: [
     BrowserModule,
