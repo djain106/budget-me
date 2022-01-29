@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MonthlyBudgetComponent } from './monthly-budget/monthly-budget.component';
 
@@ -21,6 +24,9 @@ import { MonthlyBudgetComponent } from './monthly-budget/monthly-budget.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
