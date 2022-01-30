@@ -7,7 +7,12 @@ export interface Table {
 export interface TableEntry {
     id: number;
     date: Date;
-    category: string;
+    category: string | Categories;
     payee: string;
     amount: number;
+}
+
+export enum Categories {
+    RENT = 'Rent',
+    GROCERIES = 'Groceries',
 }
