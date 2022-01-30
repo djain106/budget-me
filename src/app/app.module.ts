@@ -23,6 +23,8 @@ import { SumPipe } from './pipes/sum.pipe';
 // Other Modules
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
+import { LoginButtonComponent } from './reusable-components/login-button/login-button.component';
+import { NavBarComponent } from './reusable-components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { environment as env } from '../environments/environment';
     DataTableComponent,
     HomePageComponent,
     MonthlyBudgetComponent,
-    SumPipe
+    SumPipe,
+    LoginButtonComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
