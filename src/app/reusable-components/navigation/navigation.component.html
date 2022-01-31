@@ -1,0 +1,33 @@
+<mat-toolbar class="toolbar">
+  <button mat-icon-button style="margin-left: 0;" (click)="toggleSidebar()">
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+  </button>
+  <div class="app-title-box">
+    <h1 routerLink="/">{{title}}</h1>
+  </div>
+  <div style="margin-right: 0;">
+    <app-login-button *ngIf="(auth.isAuthenticated$ | async) == false" style="margin-right: 0;"></app-login-button>
+    <app-logout-button *ngIf="auth.isAuthenticated$ | async"></app-logout-button>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav-content" mode="over" opened [fixedInViewport]='false'>
+    <h2>Navigation</h2>
+    <mat-divider></mat-divider>
+    <button mat-button (click)="navigateToUrl('/home')">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button (click)="navigateToUrl('/budget')">
+      <mat-icon>bar_chart</mat-icon>
+      <span>Monthly Budget</span>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

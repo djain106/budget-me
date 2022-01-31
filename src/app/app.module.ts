@@ -12,6 +12,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
 
 // Imported Page Components
 import { HomePageComponent } from './page-components/home-page/home-page.component';
@@ -24,7 +26,8 @@ import { SumPipe } from './pipes/sum.pipe';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { LoginButtonComponent } from './reusable-components/login-button/login-button.component';
-import { NavBarComponent } from './reusable-components/nav-bar/nav-bar.component';
+import { LogoutButtonComponent } from './reusable-components/logout-button/logout-button.component';
+import { SideNavBarComponent } from './reusable-components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -34,17 +37,22 @@ import { NavBarComponent } from './reusable-components/nav-bar/nav-bar.component
     MonthlyBudgetComponent,
     SumPipe,
     LoginButtonComponent,
-    NavBarComponent
+    LogoutButtonComponent,
+    SideNavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    // Material Modules
     MatTableModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
+    MatSidenavModule,
+    MatDividerModule,
+    // Other Modules
     AuthModule.forRoot({
       ...env.auth,
     })
