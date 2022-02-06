@@ -14,6 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 // Imported Page Components
 import { HomePageComponent } from './page-components/home-page/home-page.component';
@@ -52,6 +54,8 @@ import { SideNavBarComponent } from './reusable-components/navigation/navigation
     MatDialogModule,
     MatSidenavModule,
     MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
     // Other Modules
     AuthModule.forRoot({
       ...env.auth,

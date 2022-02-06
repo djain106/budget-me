@@ -9,10 +9,17 @@ table {
 }
 
 h1 {
+  padding-top: 10px;
   text-align: center;
   margin: auto;
 }
 
 tr.mat-footer-row {
   font-weight: bold;
+}
+
+.mat-form-field {
+  display: block;
+  margin: auto;
+  width: 90%;
 }
