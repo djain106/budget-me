@@ -1,12 +1,12 @@
 <mat-toolbar class="toolbar">
-  <button mat-icon-button style="margin-left: 0;" (click)="toggleSidebar()">
+  <button mat-icon-button style="margin-left: 0%; z-index: 1;" (click)="toggleSidebar()">
     <mat-icon *ngIf="sidenav.opened">close</mat-icon>
     <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
   </button>
   <div class="app-title-box">
     <h1 routerLink="/">{{title}}</h1>
   </div>
-  <div style="margin-right: 0;">
+  <div style="margin-right: 0%;">
     <app-login-button *ngIf="(auth.isAuthenticated$ | async) == false" style="margin-right: 0;"></app-login-button>
     <app-logout-button *ngIf="auth.isAuthenticated$ | async"></app-logout-button>
   </div>

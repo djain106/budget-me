@@ -32,13 +32,23 @@
 }
 
 .app-title-box {
-  flex-grow: 1;
-  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
   margin: auto;
 }
+
 
 .app-title-box h1 {
   width: fit-content;
   margin: auto;
   cursor: pointer;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
 }
